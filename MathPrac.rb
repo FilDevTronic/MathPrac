@@ -19,14 +19,12 @@ begin # Start of program within a rescue/retry loop should user enter unexpected
     when 1
       loop do # Starts a loop for the math exercise generator
 
-        num = (1..10).to_a # Creates an Array called num of numbers 1 through and including 10
-
         syms = [:+, :-, :/, :*] # Creates a Hash of operators called 'syms', stored as symbols
 
         op = syms.sample # Grabs a random operator from the syms Hash, using the sample method, and sets it as variable op
 
-        num1 = num.sample.to_f # Grabs a number at random from the num Array and sets it as variable num1
-        num2 = num.sample.to_f # Grabs a number at random from the num Array and sets it as variable num2
+        num1 = rand(1..10).to_f # Grabs a number at random from the given range and sets it as variable num1
+        num2 = rand(1..10).to_f # Grabs a number at random from the given range and sets it as variable num2
 
         print "Solve this problem: "
 
@@ -49,14 +47,12 @@ begin # Start of program within a rescue/retry loop should user enter unexpected
     when 2
       loop do # Starts a loop for the math exercise generator
 
-        num = (1..100).to_a # Creates an Array called num of numbers 1 through and including 100
-
         syms = [:+, :-, :/, :*] # Creates a Hash of operators called 'syms', stored as symbols
 
         op = syms.sample # Grabs a random operator from the syms Hash, using the sample method, and sets it as variable op
 
-        num1 = num.sample.to_f # Grabs a number at random from the num Array and sets it as variable num1
-        num2 = num.sample.to_f # Grabs a number at random from the num Array and sets it as variable num2
+        num1 = rand(1..100).to_f # Grabs a number at random from the given range and sets it as variable num1
+        num2 = rand(1..100).to_f # Grabs a number at random from the given range and sets it as variable num2
 
         print "Solve this problem: "
 
@@ -79,14 +75,12 @@ begin # Start of program within a rescue/retry loop should user enter unexpected
     when 3
       loop do # Starts a loop for the math exercise generator
 
-        num = (1..1000).to_a # Creates an Array called num of numbers 1 through and including 1000
-
         syms = [:+, :-, :/, :*] # Creates a Hash of operators called 'syms', stored as symbols
 
         op = syms.sample # Grabs a random operator from the syms Hash, using the sample method, and sets it as variable op
 
-        num1 = num.sample.to_f # Grabs a number at random from the num Array and sets it as variable num1
-        num2 = num.sample.to_f # Grabs a number at random from the num Array and sets it as variable num2
+        num1 = rand(1..1000).to_f # Grabs a number at random from the given range and sets it as variable num1
+        num2 = rand(1..1000).to_f # Grabs a number at random from the given range and sets it as variable num2
 
         print "Solve this problem: "
 
