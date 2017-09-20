@@ -1,30 +1,22 @@
 # An Arithmetic math exercise generator in Ruby
 
-puts "Welcome to MathPrac. Time to practice some arithmetic math!" # Prints a welcome message in console
+puts "Welcome to MathPrac: The arithmetic math exercise app." # Prints a welcome message in console
 
-puts "Choose a difficulty level based on highest possible number for the problem:" # Gives user a choice of difficulty level
-puts "1. Easy - 10"
-puts "2. Medium - 100"
-puts "3. Hard - 1000"
-print "Enter 1, 2, or 3: "
+puts "Enter the highest possible number for your randomly generated math problem." # Gives user a choice of difficulty level
+print "Enter a whole number (e.g. 100): "
 begin # Starts a program loop that runs independently of the rest of the program and can be recovered if an error occurs
-  dif = gets.chomp.to_i # Asks the user for input and converts it to an integer
+  level = Integer(gets) rescue false# Asks the user for input and converts it to an integer
 
-  if dif == 1 # If the user enters "1" then the difficulty is set as a variable called "level" and set to only include numbers between 1 and 10
-    level = (1..10)
-    puts "Level 1 selected..."
-  elsif dif == 2 # If the user enters "1" then the difficulty is set as a variable called "level" and set to only include numbers between 1 and 100
-    level = (1..100)
-    puts "Level 2 selected..."
-  elsif dif == 3 # If the user enters "1" then the difficulty is set as a variable called "level" and set to only include numbers between 1 and 1000
-    level = (1..1000)
-    puts "Level 3 selected..."
+  if level # If the user enters "1" then the difficulty is set as a variable called "level" and set to only include numbers between 1 and 10
+    puts "The number you've entered is #{level}."
+    puts "Either of the two randomly generated numbers will not be higher than the number you've picked."
   else
     raise "Entered invalid response" # Creates an error in the program if the else condition is true, so that the rescue/retry function gets used
   end
 
 rescue # Tries to stop the program from exiting due to an unexpected command (e.g. wrong user input) by running the code below
-  puts "Wrong input. Please enter 1, 2, or 3: "
+  puts "Wrong input. Please enter an integer, also known as a whole number, e.g. 10, not 10.0 or a word!"
+  print "Retry: "
 
   retry # Starts the program from the top, where the "begin" command is
 
