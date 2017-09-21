@@ -1,5 +1,7 @@
 # An Arithmetic math exercise generator in Ruby
 
+require "mathn"
+
 puts "Welcome to MathPrac: The arithmetic math exercise app." # Prints a welcome message in console
 
 puts "Enter the highest possible number for your randomly generated math problem." # Gives user a choice of difficulty level
