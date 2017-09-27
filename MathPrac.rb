@@ -44,6 +44,7 @@ def math(level) # Define a method (or function) called math with parameter level
   puts "CORRECT" if calc == answer # If the answer variable matches the calc variable, tells user they are correct in console
 
   puts "INCORRECT, the answer is #{calc}." if calc != answer # If the answer and calc variables don't match, tells user their answer is incorrect and shows the correct answer
+  #Wrap in a conditional for integer that doesnt need to be a float
 end
 
 begin # Start of program within a rescue/retry loop should user enter unexpected input
